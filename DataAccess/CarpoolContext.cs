@@ -10,6 +10,7 @@ namespace SeekARide.DataAccess {
 	public class CarpoolContext : DbContext {
 		public CarpoolContext() : base("CarpoolContext")
         {
+			Database.SetInitializer<CarpoolContext>(null);
 		}
 
 		public DbSet<User> Users { get; set; }
